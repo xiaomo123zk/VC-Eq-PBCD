@@ -1,5 +1,5 @@
 # VC-Eq-PBCD
-We provide transportation network datasets with graph vertex-coloring-based group information to facilitate reproducibility and further research. These data can be used as a basis for developing and testing higher-performance algorithms for solving the traffic assignment user equilibrium problem.
+We provide transportation network datasets with graph vertex-coloring-based OD pairs' group information to facilitate reproducibility and further research. These data can be used as a basis for developing and testing higher-performance algorithms for solving the traffic assignment user equilibrium problem.
 
 The detailed algorithmic framework and numerical experiments are described in:
 
