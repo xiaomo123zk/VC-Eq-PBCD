@@ -1,0 +1,27 @@
+This repository provides the implementation of the VC-Eq-PBCD algorithm and the VC-PBCD algorithm for solving the user equilibrium traffic assignment problem. The code is intended to support reproducibility, algorithm comparison, and further research in large-scale traffic assignment.
+
+The project includes:
+- C++ implementations of VC-Eq-PBCD and VC-PBCD
+- Network data files for several benchmark transportation networks
+- Reference implementations or source folders for comparison methods, including Eq-PBCD, iGP, iGreedy, and iTAPAS
+- Result files and related experimental outputs
+
+The raw transportation network data used in this project were obtained from the Transportation Networks repository maintained by Bar-Gera (bstabler/TransportationNetworks).
+
+The algorithmic framework and numerical results are described in:
+
+Zhang, K., Liu, Z., Zhang, H., Zhang, Y., Tang, Y. M., & Fu, X. (2026). A graph vertex-coloring-based parallel block coordinate descent method for solving the traffic assignment problem. Transportation Research Part C: Emerging Technologies, 183, 105439.
+
+Requirements:
+- C++11-compatible compiler
+- OpenMP support
+- Windows environment is assumed in the provided project configuration
+
+Compilation example:
+- g++ -O2 -std=c++11 -fopenmp VC-Eq-PBCD.cpp -o VC-Eq-PBCD.exe
+- g++ -O2 -std=c++11 -fopenmp VC-PBCD.cpp -o VC-PBCD.exe
+
+Example execution:
+- VC-Eq-PBCD.exe 3 24 1600 3 8 2 1 1 1 1 1 1 1
+
+For questions regarding implementation, usage, or data access, please contact Kai Zhang at zhang_kai_frank@163.com.
