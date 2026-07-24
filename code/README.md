@@ -5,8 +5,7 @@ This directory contains the C++ implementations used for user-equilibrium traffi
 ## Requirements
 
 - Windows
-- VScode
-- C++11 compiler
+- A C++11 compiler
 - OpenMP support, for example MinGW-w64 `g++` with `-fopenmp`
 
 ## Main Files
@@ -47,14 +46,16 @@ Arguments:
 3. Initial `elseparalevel`.
 4. Path-count threshold `num`.
 5. OD coloring file suffix `sim`; for example `8` reads `*_od_VertexColor_equ_sim08.csv`.
-6. `parameter[4]`
-7. `parameter[5]`
-8. `parameter[6]`
-9. `parameter[7]`
-10. `parameter[8]`
-11. `parameter[9]`
-12. `parameter[10]`
-13. `parameter[11]`
+6. `parameter[4]`: divisor applied to `elseparalevel` after `UEGap < 1e-4`.
+7. `parameter[5]`: divisor applied to `elseparalevel` after `UEGap < 1e-5`.
+8. `parameter[6]`: divisor applied to `elseparalevel` after `UEGap < 1e-6`.
+9. `parameter[7]`: divisor applied to `elseparalevel` after `UEGap < 1e-7`.
+10. `parameter[8]`: divisor applied to `elseparalevel` after `UEGap < 1e-8`.
+11. `parameter[9]`: divisor applied to `elseparalevel` after `UEGap < 1e-9`.
+12. `parameter[10]`: divisor applied to `elseparalevel` after `UEGap < 1e-10`.
+13. `parameter[11]`: divisor applied to `elseparalevel` after `UEGap < 1e-11`.
+
+After each outer iteration, the code first sets `elseparalevel = level / 2` once `UEGap < 1`. It then checks the thresholds above in order. If multiple thresholds are satisfied in the same iteration, the divisors are applied cumulatively. A value of `1` leaves `elseparalevel` unchanged at that threshold; values greater than `1` reduce the batch size used for restricted updates of OD pairs that still violate the OD gap.
 
 Anaheim example:
 
@@ -67,7 +68,7 @@ Anaheim example:
 Example:
 
 ```powershell
-.\VC-PBCD.exe 1 8 > Ana-VC-PBCD.log
+.\VC-PBCD.exe 3 8
 ```
 
 Arguments:
@@ -75,6 +76,12 @@ Arguments:
 1. Network selector: `1=Anaheim`, `2=Chicago-Sketch`, `3=Birmingham`, `4=Philadelphia`.
 2. Number of OpenMP threads.
 
+The OD coloring suffix is hard-coded in `VC-PBCD.cpp` by network:
+
+- Anaheim: `sim09`
+- Chicago-Sketch: `sim07`
+- Birmingham: `sim08`
+- Philadelphia: `sim09`
 
 ## Output
 
