@@ -75,12 +75,6 @@ Arguments:
 1. Network selector: `1=Anaheim`, `2=Chicago-Sketch`, `3=Birmingham`, `4=Philadelphia`.
 2. Number of OpenMP threads.
 
-The OD coloring suffix is hard-coded in `VC-PBCD.cpp` by network:
-
-- Anaheim: `sim09`
-- Chicago-Sketch: `sim07`
-- Birmingham: `sim08`
-- Philadelphia: `sim09`
 
 ## Output
 
