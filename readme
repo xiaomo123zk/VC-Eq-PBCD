@@ -15,13 +15,13 @@ Zhang, K., Liu, Z., Zhang, H., Zhang, Y., Tang, Y. M., & Fu, X. (2026). A graph 
 Requirements:
 - C++11-compatible compiler
 - OpenMP support
+- VScode
 - Windows environment is assumed in the provided project configuration
 
 Compilation example:
-- g++ -O2 -std=c++11 -fopenmp VC-Eq-PBCD.cpp -o VC-Eq-PBCD.exe
-- g++ -O2 -std=c++11 -fopenmp VC-PBCD.cpp -o VC-PBCD.exe
+- g++ -o VC-Eq-PBCD -std=c++11 -fopenmp VC-Eq-PBCD.cpp 
 
 Example execution:
-- VC-Eq-PBCD.exe 3 24 1600 3 8 2 1 1 1 1 1 1 1
+- .\VC-Eq-PBCD.exe 3 24 1600 3 8 2 1 1 1 1 1 1 1
 
 For questions regarding implementation, usage, or data access, please contact Kai Zhang at zhang_kai_frank@163.com.
