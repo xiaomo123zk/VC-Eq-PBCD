@@ -5,7 +5,7 @@ This directory contains the C++ implementations used for user-equilibrium traffi
 ## Requirements
 
 - Windows
-- A C++11 compiler
+- C++11 compiler
 - OpenMP support, for example MinGW-w64 `g++` with `-fopenmp`
 
 ## Main Files
