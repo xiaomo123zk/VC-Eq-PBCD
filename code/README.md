@@ -76,13 +76,6 @@ Arguments:
 1. Network selector: `1=Anaheim`, `2=Chicago-Sketch`, `3=Birmingham`, `4=Philadelphia`.
 2. Number of OpenMP threads.
 
-The OD coloring suffix is hard-coded in `VC-PBCD.cpp` by network:
-
-- Anaheim: `sim09`
-- Chicago-Sketch: `sim07`
-- Birmingham: `sim08`
-- Philadelphia: `sim09`
-
 ## Output
 
 Both programs print iteration progress, objective value, UE gap, runtime, and `LinkFlow[0]` to the console. Redirect output to a log file when running experiments.
