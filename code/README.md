@@ -66,7 +66,7 @@ Anaheim example:
 Example:
 
 ```powershell
-.\VC-PBCD.exe 3 8
+.\VC-PBCD.exe 1 8 > Ana-VC-PBCD.log
 ```
 
 Arguments:
